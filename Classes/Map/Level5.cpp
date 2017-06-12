@@ -117,68 +117,68 @@ void Level5::stonesEffect()
 
 void Level5::addTerrains()
 {
-	auto terrain14 = Terrain::createTerrain(1);
+	auto terrain14 = KRTerrain::createTerrain(1);
 	terrain14->setPosition(Point(311,712));
 	terrain14->setTag(14);
 	addChild(terrain14,3);
 
-	auto terrain3 = Terrain::createTerrain(1);
+	auto terrain3 = KRTerrain::createTerrain(1);
 	terrain3->setPosition(Point(687,606));
 	terrain3->setTag(3);
 	addChild(terrain3,4);
 
-	auto terrain11 = Terrain::createTerrain(1);
+	auto terrain11 = KRTerrain::createTerrain(1);
 	terrain11->setPosition(Point(435,550));
 	terrain11->setTag(11);
 	addChild(terrain11,5);
 
-	auto terrain12 = Terrain::createTerrain(1);
+	auto terrain12 = KRTerrain::createTerrain(1);
 	terrain12->setPosition(Point(300,550));
 	terrain12->setTag(12);
 	addChild(terrain12,5);
 
-	auto terrain13 = Terrain::createTerrain(1);
+	auto terrain13 = KRTerrain::createTerrain(1);
 	terrain13->setPosition(Point(170,550));
 	terrain13->setTag(13);
 	addChild(terrain13,5);
 
 
-	auto terrain1 = Terrain::createTerrain(1);
+	auto terrain1 = KRTerrain::createTerrain(1);
 	terrain1->setPosition(Point(858,466));
 	terrain1->setTag(1);
 	addChild(terrain1,6);
 
-	auto terrain4 = Terrain::createTerrain(1);
+	auto terrain4 = KRTerrain::createTerrain(1);
 	terrain4->setPosition(Point(631,474));
 	terrain4->setTag(4);
 	addChild(terrain4,6);
 
-	auto terrain8 = Terrain::createTerrain(1);
+	auto terrain8 = KRTerrain::createTerrain(1);
 	terrain8->setPosition(Point(558,390));
 	terrain8->setTag(8);
 	addChild(terrain8,7);
 
-	auto terrain9 = Terrain::createTerrain(1);
+	auto terrain9 = KRTerrain::createTerrain(1);
 	terrain9->setPosition(Point(446,373));
 	terrain9->setTag(9);
 	addChild(terrain9,7);
 
-	auto terrain10 = Terrain::createTerrain(1);
+	auto terrain10 = KRTerrain::createTerrain(1);
 	terrain10->setPosition(Point(316,374));
 	terrain10->setTag(10);
 	addChild(terrain10,7);
 
-	auto terrain5 = Terrain::createTerrain(1);
+	auto terrain5 = KRTerrain::createTerrain(1);
 	terrain5->setPosition(Point(668,343));
 	terrain5->setTag(5);
 	addChild(terrain5,7);
 
-	auto terrain6 = Terrain::createTerrain(1);
+	auto terrain6 = KRTerrain::createTerrain(1);
 	terrain6->setPosition(Point(747,305));
 	terrain6->setTag(6);
 	addChild(terrain6,7);
 
-	auto terrain7 = Terrain::createTerrain(1);
+	auto terrain7 = KRTerrain::createTerrain(1);
 	terrain7->setPosition(Point(851,290));
 	terrain7->setTag(7);
 	addChild(terrain7,8);

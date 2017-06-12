@@ -1,5 +1,5 @@
 #include "BaseTower.h"
-#include "Terrain.h"
+#include "KRTerrain.h"
 #include "TowerPanleLayer.h"
 #include "BaseMap.h"
 #include "GameManager.h"
@@ -54,14 +54,14 @@ void BaseTower::showTowerInfo()
 
 void BaseTower::sellTower()
 {
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<KRTerrain*>(this->getParent())->terrain->setVisible(true);
 	removeTower();
 }
 
 void BaseTower::removeTower()
 {
 	static_cast<BaseMap*>(this->getParent()->getParent())->playerState->removeTowerInfo();
-	static_cast<Terrain*>(this->getParent())->smokeEffect();
+	static_cast<KRTerrain*>(this->getParent())->smokeEffect();
 	this->unscheduleAllCallbacks();
 	this->removeAllChildren();
 	this->removeFromParent();

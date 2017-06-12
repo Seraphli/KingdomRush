@@ -1,4 +1,5 @@
 #include "LoadingScene.h"
+#include "TransitionGame.h"
 #include "SimpleAudioEngine.h" 
 #include "WelcomeScene.h"
 #include "MyAnimation.h"
@@ -176,9 +177,10 @@ void LoadingScene::logic(float dt)
 	{
 		loadSouce();
 	}
-    if (numberOfLoadedRes == 2)
-    {
+	if (numberOfLoadedRes == 2)
+	{
 		auto scene = WelcomeScene::createScene();
-		Director::getInstance()->runWithScene(scene);
-    }
+		// Director::getInstance()->runWithScene(scene);
+		Director::getInstance()->replaceScene(TransitionGame::create(2.0f,scene));
+	}
 }

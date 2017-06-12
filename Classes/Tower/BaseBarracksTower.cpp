@@ -50,7 +50,7 @@ void BaseBarracksTower::initTower()
 void BaseBarracksTower::sellTower()
 {
 	static_cast<BaseMap*>(this->getParent()->getParent())->playerState->removeTowerInfo();
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<KRTerrain*>(this->getParent())->terrain->setVisible(true);
 	for(int i = 0;i<Soldiers.size();i++){
 		if(Soldiers.at(i)!=NULL){
 			if(Soldiers.at(i)->nearestMonster!=NULL && Soldiers.at(i)->nearestMonster->getState()!=stateDeath)
@@ -59,7 +59,7 @@ void BaseBarracksTower::sellTower()
 			Soldiers.at(i)->unscheduleAllCallbacks();
 		}
 	}
-	static_cast<Terrain*>(this->getParent())->smokeEffect();
+	static_cast<KRTerrain*>(this->getParent())->smokeEffect();
 	this->unscheduleAllCallbacks();
 	this->removeAllChildren();
 	this->removeFromParent();

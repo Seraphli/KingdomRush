@@ -76,8 +76,8 @@ void MechsTower::sellTower()
 		mecha->unscheduleAllCallbacks();
 		mecha->removeFromParent();
 	}
-	static_cast<Terrain*>(this->getParent())->smokeEffect();
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<KRTerrain*>(this->getParent())->smokeEffect();
+	static_cast<KRTerrain*>(this->getParent())->terrain->setVisible(true);
 	this->unscheduleAllCallbacks();
 	this->removeAllChildren();
 	this->removeFromParent();

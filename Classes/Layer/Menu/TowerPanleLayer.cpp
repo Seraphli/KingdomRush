@@ -3,7 +3,7 @@
 #include "SimpleArtilleryTowerlvl1.h"
 #include "SimpleMageTowerlvl1.h"
 #include "BaseBarracksTower.h"
-#include "Terrain.h"
+#include "KRTerrain.h"
 #include "GameManager.h"
 #include "BaseMap.h"
 

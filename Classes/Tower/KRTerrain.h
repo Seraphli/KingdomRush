@@ -5,11 +5,11 @@
 
 USING_NS_CC;
 
-class Terrain : public Sprite{
+class KRTerrain : public Sprite{
 
 public:
 	virtual bool init(int type);
-    static Terrain* createTerrain(int type);
+    static KRTerrain* createTerrain(int type);
 	void showUpdateMenu();
     void hideUpdateMenu();
 	Sprite* terrain;

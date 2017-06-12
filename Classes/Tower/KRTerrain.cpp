@@ -1,10 +1,10 @@
-#include "Terrain.h"
+#include "KRTerrain.h"
 #include "BaseMap.h"
 #include "TowerPanleLayer.h"
 
-Terrain* Terrain::createTerrain(int type)
+KRTerrain* KRTerrain::createTerrain(int type)
 {
-	auto terrain = new Terrain();
+	auto terrain = new KRTerrain();
 	if(terrain && terrain->init(type)){
 		terrain->autorelease();
 		return terrain;
@@ -13,7 +13,7 @@ Terrain* Terrain::createTerrain(int type)
 	return NULL;
 }
 
-bool Terrain::init(int type)
+bool KRTerrain::init(int type)
 {
 	if (!Sprite::init())
 	{
@@ -37,13 +37,13 @@ bool Terrain::init(int type)
 	}
 	addChild(terrain);
 	auto listener = EventListenerTouchOneByOne::create();
-	listener->onTouchBegan = CC_CALLBACK_2(Terrain::onTouchBegan, this);
-	listener->onTouchEnded = CC_CALLBACK_2(Terrain::onTouchEnded, this);
+	listener->onTouchBegan = CC_CALLBACK_2(KRTerrain::onTouchBegan, this);
+	listener->onTouchEnded = CC_CALLBACK_2(KRTerrain::onTouchEnded, this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener,terrain);
 	return true;
 }
 
-void Terrain::showUpdateMenu()
+void KRTerrain::showUpdateMenu()
 {
 	auto towerPanleLayer = TowerPanleLayer::create();
 	towerPanleLayer->setPosition(this->getPosition());
@@ -54,18 +54,18 @@ void Terrain::showUpdateMenu()
 	isUpdateMenuShown = true;
 }
    
-void Terrain::hideUpdateMenu()
+void KRTerrain::hideUpdateMenu()
 {
 	static_cast<BaseMap*>(this->getParent())->mTouchLayer->removeChildByTag(getTag());
 	isUpdateMenuShown = false;
 }
 
-bool Terrain::onTouchBegan(Touch *touch, Event *event)
+bool KRTerrain::onTouchBegan(Touch *touch, Event *event)
 {
 	return true;
 }
 
-void Terrain::onTouchEnded(Touch* touch, Event* event)
+void KRTerrain::onTouchEnded(Touch* touch, Event* event)
 {
 	auto target = static_cast<Sprite*>(event->getCurrentTarget());
 
@@ -86,7 +86,7 @@ void Terrain::onTouchEnded(Touch* touch, Event* event)
 	}
 }
 
-void Terrain::smokeEffect()
+void KRTerrain::smokeEffect()
 {
 	auto smoke = Sprite::createWithSpriteFrameName("effect_sellSmoke_0001.png");
 	addChild(smoke,99);

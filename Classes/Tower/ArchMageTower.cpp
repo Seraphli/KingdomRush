@@ -15,7 +15,7 @@ void ArchMageTower::sellTower()
 			DelayBullet[i]->removeFromParent();
 		}
 	}
-	static_cast<Terrain*>(this->getParent())->terrain->setVisible(true);
+	static_cast<KRTerrain*>(this->getParent())->terrain->setVisible(true);
 	this->removeFromParent();
 }
 
